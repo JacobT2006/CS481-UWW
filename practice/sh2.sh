@@ -1,0 +1,5 @@
+echo "Your input: $@"
+echo "You entered $# arguments"
+echo "First argument is $1"
+echo "Second argument is $2"
+echo "Name of the script is $0"
