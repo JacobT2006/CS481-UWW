@@ -1,0 +1,113 @@
+Unix
+The Unix operating system got its start in 1969 at Bell Laboratories and was written in assembly language. In 1973, Ken Thompson and Dennis Ritchie succeeded in rewriting 
+Unix in their new language C. This was quite an audacious move; at the time, system programming was done in assembly in order to extract maximum performance from the hardware. 
+The concept of a portable operating system was barely a gleam in anyone's eye.
+
+The creation of a portable operating system was very significant in the computing industry, but then came the problem of licensing each type of Unix. Richard Stallman, an 
+American software freedom activist and programmer recognized a need for open source solutions and launched the GNU project in 1983, later founding the Free Software Foundation. 
+His goal was to create a completely free and open source operating system that was Unix-compatible or Unix-like.
+
+Linux
+In 1987, the source code to a minimalistic Unix-like operating system called MINIX was released by Andrew Tanenbaum, a professor at Vrije Universiteit, for academic purposes. 
+Linus Torvalds began developing a new operating system based on MINIX while a student at the University of Helsinki in 1991. In September of 1991, Torvalds released the first 
+version (0.1) of the Linux kernel.
+
+Torvalds greatly enhanced the open source community by releasing the Linux kernel under the GNU General Public License so that everyone has access to the source code and can 
+freely make modifications to it. Many components from the GNU project, such as the GNU Core Utilities, were then integrated with the Linux kernel, thus completing the first 
+ and open source operating system.
+
+Linux has been adapted to a variety of computer systems of many sizes and purposes. Furthermore, different variants of Linux (called Linux distributions) have been developed
+over time to meet various needs. There are now hundreds of different Linux distributions available, with a wide variety of features. The most popular operating system in the 
+world is actually Android, which is built on the Linux kernel.
+
+Linux has been so heavily utilized in the HPC and scientific computing community that it has become the standard in many areas of academic and scientific research, particularly 
+those 
+requiring HPC. There have been over 40 years of development in Unix and Linux, with many academic, scientific, and system tools. In fact, as of November 2017, all of the TOP500 
+supercomputers in the world run Linux!
+
+Linux has four essential properties which make it an excellent operating system for the science community:
+
+Performance – Performance of the operating system can be optimized for specific tasks such as running small portable devices or large supercomputers.
+Functionality – A number of community-driven scientific applications and libraries have been developed under Linux such as molecular dynamics, linear algebra, and fast-Fourier 
+transforms.
+
+Flexibility – The system is flexible enough to allow users to build applications with a wide array of support tools such as compilers, scientific libraries, debuggers, and 
+network monitors.
+
+Portability – The operating system, utilities, and libraries have been ported to a wide variety of devices including desktops, clusters, supercomputers, mainframes, embedded 
+systems, and smart phones.
+
+Everything in Linux is considered to be either a file or a process:
+
+A process is an executing program identified by a unique process identifier, called a PID. Processes may be short in duration, such as a process that prints a file to 
+the screen, or they may run indefinitely, such as a monitor program.
+
+A file is a collection of data, with a location in the file system called a path. Paths will typically be a series of words (directory names) separated by forward 
+slashes, /. Files are generally created by users via text editors, compilers, or other means.
+
+A directory is a special type of file. Linux uses a directory to hold information about other files. You can think of a directory as a container that holds other files 
+or directories; it is equivalent to a folder in Windows or macOS.
+
+A file is typically stored on physical storage media such as a disk (hard drive, flash disk, etc.). Every file must have a name because the operating system identifies 
+files by their name. File names may contain any characters, although some special characters (such as spaces, quotes, and parenthesis) can make it difficult to access the 
+file, so you should avoid them in filenames. On most common Linux variants, file names can be as long as 255 characters, so it is convenient to use descriptive names.
+
+Files can hold any sequence of bytes; it is up to the user to choose the appropriate application to correctly interpret the file contents. Files can be human readable 
+text organized line by line, a structured sequence only readable by a specific application, or a machine-readable byte sequence. Many programs interpret the contents of 
+a file as having some special structure, such as a pdf or postscript file. In scientific computing, binary files are often used for efficiency storage and data access. 
+Some other examples include scientific data formats like NetCDF or HDF which have specific formats and provide application programming interfaces (APIs) for reading and writing.
+
+The Linux kernel is responsible for organizing processes and interacting with files; it allocates time and memory to each process and handles the file system and 
+communications in response to system calls. The Linux system uses files to represent everything in the system: devices, internals to the kernel, configurations, etc.
+
+Shells
+
+A variety of different shells are available for Linux and Unix, each with pros and cons. While bash (updated version of sh) and tcsh (descended from C-shell/csh) 
+are the most common shells, the choice of shell is entirely up to user preference and availability on the system. In most Linux distributions, bash is the default shell.
+
+The purpose of a shell is to interpret commands for the Operating System (OS) to execute. Since bash and other shells are scripting languages, a shell can also be 
+used for programming via scripts. The shell is an interactive and customizable environment for the user.
+
+Manual Pages
+
+The easiest way to get more information about a particular Linux command or program is to use the man command followed by the item you want information on:
+
+$ man <program or command>
+
+Shell session
+
+This will bring up the manual page ("man page") for the program within the shell, which have been formatted from the online man pages. These pages can be 
+referenced from any Linux or Unix shell where man is installed, which is most systems. Linux includes a built-in manual for nearly all commands, so these 
+should be your go-to reference.
+
+The manual is divided into a number of sections by type of topic.
+
+
+Directories
+In a hierarchical file system like Linux, the root directory is the highest directory in the hierarchy, and in Linux this is the / directory. The home directory 
+
+is created for the user, and is typically located at /home/<username>. Commonly used shorthands for the home directory are ~ or $HOME. The home directory is usually 
+the initial default working directory when you open a shell.
+
+The absolute path or full path details the entire path through the directory structure to get to a file, starting at /. A relative path is the path from where you are now 
+(your present working directory) to the file in question. An easy way to know if a path is absolute is to check if it contains the / character at the very beginning of the path.
+
+The "." directory is a built-in shortcut for the current directory path and similarly the ".." directory is the directory above the current directory. These special
+shortcuts exist in every directory on the file system, except ".." does not exist in the root directory (/) because it is at the top. Files that begin with a 
+dot "." (i.e. .bashrc) are called dot files and are hidden by default during navigation (in the sense that the ls command will not display them), since 
+they are usually used for user preferences or system configuration.
+
+
+
+Navigating
+Here is a list of common commands used for navigating directories:
+
+pwd command
+pwd – print working directory. Prints the full path to the directory you are in, starting with the root directory.
+
+ls command
+ls – lists the contents of a directory.
+
+cd command
+cd – change directory to the directory or path following the command. The following command will take you from your current directory to your home directory 
+on most Linux systems:
